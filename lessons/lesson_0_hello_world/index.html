@@ -1,65 +1,92 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>TDP: Lesson 0 Hello World!</title>
+		<link href="../../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+	</head>
 	<body>
-		<h1>
-			Hello World!
-		</h1>
-		<h3>
-			Defining a function in Python
-		</h3>
+	    <div class="header">
+        	<h1>Test Driven Python</h1>
+        	<h2>
+            	<a href="https://github.com/thejessleigh/test_driven_python">github</a>
+        	</h2>
+    	</div>
+    	<div class="nav">
+        	<h2>
+            	<a href="../../index.html">Home</a>
+        	</h2>
+        	<b>Lessons:</b>
+        	<ul>
+            	<li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
+            	<li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
+            	<li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
+        	</ul>
+    	</div>
+    	<div class="content">
+			<h1>
+				Hello World!
+			</h1>
+			<h3>
+				Defining a function in Python
+			</h3>
 
-		<p>
-			This lesson teaches you how to define a Python function. Try running the tests for this lesson before doing anything else!
-		</p>
-
-		<p>
-			Here's a command that will allow you to run your tests from the top level directory of this project (the <code>test_driven_python</code> folder):
-		</p>
-
-		<p>
-			<code>python -m unittest -vf tests.test_lesson_0_hello_world</code>
-		</p>
-
-		<p>
-			That can look a little scary at first, so let's break it down.
-			<ul>
-				<li><code>python</code> indicates that we want to run something in Python</li>
-				<li><code>-m</code> tells Python to run the module we want (<code>test.test_lesson_x</code>) as a script</li>
-				<li><code>unittest</code> tells Python that we're running unit tests</li>
-				<li><code>-vf</code> is a combination of two separate options:
-					<ul>
-						<li><code>-v</code> encourages Python to be as verbose as possible with its output</li>
-						<li><code>-f</code> tells Python to stop running the tests once it hits a failure. This is entirely optional, but you should try doing this to fix one failure at a time while you get the hang of how Python works</li>
-					</ul>
-				</li>
-			</ul>
-		</p>
-
-		<p>
-			What error did you get when you first ran that command?
-		</p>
-
-		<h3>
-			Remember, errors are built to be <em>helpful</em>, not scary!
-		</h3>
-
-		<p>
-			You should have seen an <code>ImportError</code>. This is Python telling you that it's unable to import the module <code>hello_world</code> because there is no <code>hello_world.py</code> file in the lesson 0 directory.
-		</p>
-			So your first step should be to create <code>hello_world.py</code> in <code>lessons/lesson_0_hello_world</code>
-		</p>
-
-		<p>
-			Run the tests again. What's your next failure.
-		</p>
-
-		<p>
-			Keep running your tests and fixing failures until you get an output that says:
 			<p>
-				<code>Ran 2 tests in 0.000s OK</code>
+				This lesson teaches you how to define a Python function. Try running the tests for this lesson before doing anything else!
 			</p>
-			That means that you've passed all the tests and completed the challenge! You're ready to move on to lesson 1!
-		</p>
+
+			<p>
+				Here's a command that will allow you to run your tests from the top level directory of this project (the <code>test_driven_python</code> folder):
+			</p>
+			<div class='codeblock'>
+				<code>
+					python -m unittest -vf tests.test_lesson_0_hello_world
+				</code>
+			</div>
+
+			<p>
+				That can look a little scary at first, so let's break it down.
+				<ul>
+					<li><code>python</code> indicates that we want to run something in Python</li>
+					<li><code>-m</code> tells Python to run the module we want (<code>test.test_lesson_x</code>) as a script</li>
+					<li><code>unittest</code> tells Python that we're running unit tests</li>
+					<li><code>-vf</code> is a combination of two separate options:
+						<ul>
+							<li><code>-v</code> encourages Python to be as verbose as possible with its output</li>
+							<li><code>-f</code> tells Python to stop running the tests once it hits a failure. This is entirely optional, but you should try doing this to fix one failure at a time while you get the hang of how Python works</li>
+						</ul>
+					</li>
+				</ul>
+			</p>
+
+			<p>
+				What error did you get when you first ran that command?
+			</p>
+
+			<h3>
+				Remember, errors are built to be <em>helpful</em>, not scary!
+			</h3>
+
+			<p>
+				You should have seen an <code>ImportError</code>. This is Python telling you that it's unable to import the module <code>hello_world</code> because there is no <code>hello_world.py</code> file in the lesson 0 directory.
+			</p>
+				So your first step should be to create <code>hello_world.py</code> in <code>lessons/lesson_0_hello_world</code>
+			</p>
+
+			<p>
+				Run the tests again. What's your next failure.
+			</p>
+
+			<p>
+				Keep running your tests and fixing failures until you get an output that says:
+				<p>
+					<code>Ran 2 tests in 0.000s OK</code>
+				</p>
+				That means that you've passed all the tests and completed the challenge! You're ready to move on to lesson 1!
+			</p>
+		</div>
+		<div class="footer">
+
+		</div>
 
 	</body>
 </html>
