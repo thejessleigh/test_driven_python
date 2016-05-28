@@ -29,13 +29,88 @@
 			<h1>
 				Personalized Greetings
 			</h1>
+			<p>
+				Instead of printing a generic output, like we did in <a href="../lesson_0_hello_world/index.html">Lesson 0</a>, this time we'll create a function that takes an input and creates a customized greeting for whatever name you feed into the function.
+			</p>
+			<h2>Lesson objectives:</h2>
+			<ul>
+				<li>
+					Understand how to define a function that accepts inputs (<em>arguments</em>)
+				</li>
+				<li>
+					Learn how to use a function's arguments inside your function
+				</li>
+				<li>Understand basic <em>string interpolation</em></li>
+			</ul>
 			<h3>
-				Defining a function that accepts and uses inputs
+				Defining a function that accepts arguments
 			</h3>
 
 			<p>
-				This lesson teaches you how to define a Python function that accepts an input and makes use of it in its output.
+				In <a href="../lesson_0_hello_world/index.html">Lesson 0</a> we learned how to define a basic function in Python. This time, we'll create a function that's slightly more complicated.
 			</p>
+
+			<p>
+				Instead of using empty parenthases when defining the name of the funtion, we can fill those parenthases with <em>argument names</em>. These are variables that we pass into the function that we can use later.
+			</p>
+
+			<div class="codeblock">
+				<code>
+					def repeat_my_argument(argument):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;print argument + "!"
+				</code>
+			</div>
+
+			<p>
+				That simple function above takes a variable and prints it out with an extra "!" on th end. It's a simplistic example, but it illustrates how we can use arguments inside a function to alter our output.
+			</p>
+
+			<h3>String Interpolation</h3>
+
+			<p>
+				<em>String interpolation</em> is the name for inserting a variable into a string so that we can alter the end state of that string. For example, if we had a family with the last name "Smith," and we wanted to create a function that takes in a first name and outputs their whole name, it might look something like this:
+			</p>
+
+			<div class="codeblock">
+				<code>
+					def smith_full_name(first_name):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;return "{} Smith".format(first_name)
+					<br><br>
+					smith_full_name("Ellen") #=> "Ellen Smith"
+				</code>
+			</div>
+
+			<p>
+				In that example, we provided the name "Ellen" to the function, and it inserted it into the string using the <code>.format</code> method.
+			</p>
+
+			<h3>Challenge Rules:</h3>
+			<ul>
+				<li>
+					Create a Python file called <code>greetings.py</code> in the <code>lessons/lesson_1_greetings</code> directory
+				</li>
+				<li>
+					Create a function called <code>greetings</code> in the <code>greetings.py</code> file
+				</li>
+				<li>
+					The function should accept a single string as an <em>argument</em>
+				</li>
+				<li>
+					The function should return <code>"Hi, " + <em>argument</em> + "!"</code>
+				</li>
+			</ul>
+
+			<h3>Example</h3>
+
+			<div class="codeblock">
+				<code>
+					greetings("Jill") #=> "Hi, Jill!"
+				</code>
+			</div>
+
+			<h3>Running the exercise</h3>
 
 			<p>
 				Let's run our unit test command in the terminal again, but with the correct module name for our lesson 1 tests.
@@ -49,12 +124,13 @@
 				Again, you should have seen an <code>ImportError</code> that indicates we need a certain file that doesn't exist yet. So let's create <code>greetings.py</code> in <code>lessons/lesson_1_greetings</code>.
 			</p>
 
+
 			<p>
 				Run your tests again and fix each failure as it comes up. You'll know you're done when your output says:
-				<p>
+				<div class="codeblock">
 					<code>Ran 3 tests in 0.000s OK</code>
-				</p>
-				Congratulations, you're ready for lesson 2!
+				</div>
+				Congratulations, you're ready for <a href="../lesson_2_fizzbuzz/index.html">Lesson 2</a>!
 			</p>
 		</div>
 		<div class="footer">
