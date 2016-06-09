@@ -78,6 +78,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;print "x is greater than 2"
                     <br>
                     else:
+                    <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;print "x is less than or equal to 2"
                 </code>
             </div>
@@ -129,32 +130,34 @@
                     Lists are ordered. That means that to access a value inside the list, you need to know what position it occupies in the list.
                 </li>
                 <li>
-                    List positions, or "indexes" (or "indicies" - both are correct and people will use them interchangeably), start counting at 0, not 1.
+                    List positions, or "indexes" (or "indicies" - both are correct and people will use them interchangeably), start counting at <code>0</code>, not <code>1</code>.
                 </li>
             </ul>
 
             <h3>Challenge Rules:</h3>
-            <ol>
+            <ul>
                 <li>
                     The function should accept an integer
                 </li>
                 <li>
                     For every integer between 1 and the input the function should save one of four options to an list
                 </li>
+                    <ol>
+                        <li>
+                            If the integer is divisible by 3, save the word "Fizz" to the list
+                        </li>
+                        <li>
+                            If the integer is divisible by 5, save the word "Buzz" to the list
+                        </li>
+                        <li>
+                            If the integer is divisible by both 3 and 5, save the word "FizzBuzz" to the list
+                        </li>
+                        <li>
+                            If the integer is divisible by neither 3 nor 5, save that integer to the list
+                        </li>
+                    </ol>
                 <li>
-                    If the integer is divisible by 3, save the word "Fizz" to the list
-                </li>
-                <li>
-                    If the integer is divisible by 5, save the word "Buzz" to the list
-                </li>
-                <li>
-                    If the integer is divisible by both 3 and 5, save the word "FizzBuzz" to the list
-                </li>
-                <li>
-                    If the integer is divisible by neither 3 nor 5, save that integer to the list
-                </li>
-                <li>
-                    Return the list of integers and strings
+                    The function should return a list of integers and strings
                 </li>
                 <li>
                     Edge cases
@@ -164,7 +167,7 @@
                             </li>
                         </ul>
                 </li>
-            </ol>
+            </ul>
 
             <h3>Example</h3>
             <div class="codeblock">
