@@ -18,14 +18,14 @@ from lessons.lesson_1_greetings import greetings
 
 
 class GreetingsTestCase(unittest.TestCase):
-	def test_greetings_function_exists(self):
-		func = greetings.greetings
-		self.assertIsNotNone(func)
+    def test_greetings_function_exists(self):
+        func = greetings.greetings
+        self.assertIsNotNone(func)
 
-	def test_greetings_function_with_input(self):
-		greet = greetings.greetings("Amy")
-		self.assertEqual(greet, "Hi, Amy!")
+    def test_greetings_function_with_input(self):
+        greet = greetings.greetings("Amy")
+        self.assertEqual(greet, "Hi, Amy!")
 
-	def test_grettings_function_with_another_input(self):
-		greet = greetings.greetings("Belle")
-		self.assertEqual(greet, "Hi, Belle!")
+    def test_grettings_function_with_another_input(self):
+        greet = greetings.greetings("Belle")
+        self.assertEqual(greet, "Hi, Belle!")

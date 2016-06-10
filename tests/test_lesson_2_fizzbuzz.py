@@ -27,52 +27,52 @@ from lessons.lesson_2_fizzbuzz import fizzbuzz
 
 
 class FizzBuzzTestCase(unittest.TestCase):
-	def test_fizzbuzz_returns_list(self):
-		twelve = fizzbuzz.fizzbuzz(12)
-		self.assertIsInstance(twelve, list)
+    def test_fizzbuzz_returns_list(self):
+        twelve = fizzbuzz.fizzbuzz(12)
+        self.assertIsInstance(twelve, list)
 
 
-	def test_fizzbuzz_list_is_the_correct_length(self):
-		twelve = fizzbuzz.fizzbuzz(12)
-		self.assertEqual(len(twelve), 12)
-		eighty = fizzbuzz.fizzbuzz(80)
-		self.assertEqual(len(eighty), 80)
+    def test_fizzbuzz_list_is_the_correct_length(self):
+        twelve = fizzbuzz.fizzbuzz(12)
+        self.assertEqual(len(twelve), 12)
+        eighty = fizzbuzz.fizzbuzz(80)
+        self.assertEqual(len(eighty), 80)
 
-	def test_fizzbuzz_handles_multiples_of_3(self):
-		up_to_twelve = fizzbuzz.fizzbuzz(12)
-		self.assertEqual(up_to_twelve[2], "Fizz")
-		self.assertEqual(up_to_twelve[5], "Fizz")
-		self.assertEqual(up_to_twelve[8], "Fizz")
-		self.assertEqual(up_to_twelve[11], "Fizz")
+    def test_fizzbuzz_handles_multiples_of_3(self):
+        up_to_twelve = fizzbuzz.fizzbuzz(12)
+        self.assertEqual(up_to_twelve[2], "Fizz")
+        self.assertEqual(up_to_twelve[5], "Fizz")
+        self.assertEqual(up_to_twelve[8], "Fizz")
+        self.assertEqual(up_to_twelve[11], "Fizz")
 
-	def test_fizzbuzz_handles_multiples_of_5(self):
-		up_to_twenty_five = fizzbuzz.fizzbuzz(25)
-		self.assertEqual(up_to_twenty_five[4], "Buzz")
-		self.assertEqual(up_to_twenty_five[9], "Buzz")
-		self.assertEqual(up_to_twenty_five[19], "Buzz")
+    def test_fizzbuzz_handles_multiples_of_5(self):
+        up_to_twenty_five = fizzbuzz.fizzbuzz(25)
+        self.assertEqual(up_to_twenty_five[4], "Buzz")
+        self.assertEqual(up_to_twenty_five[9], "Buzz")
+        self.assertEqual(up_to_twenty_five[19], "Buzz")
 
-	def test_fizzbuzz_handles_multiples_of_3_and_5(self):
-		up_to_eighty = fizzbuzz.fizzbuzz(60)
-		self.assertEqual(fizzbuzz[14], "FizzBuzz")
-		self.assertEqual(fizzbuzz[29], "FizzBuzz")
-		self.assertEqual(fizzbuzz[44], "FizzBuzz")
-		self.assertEqual(fizzbuzz[59], "FizzBuzz")
+    def test_fizzbuzz_handles_multiples_of_3_and_5(self):
+        up_to_eighty = fizzbuzz.fizzbuzz(60)
+        self.assertEqual(fizzbuzz[14], "FizzBuzz")
+        self.assertEqual(fizzbuzz[29], "FizzBuzz")
+        self.assertEqual(fizzbuzz[44], "FizzBuzz")
+        self.assertEqual(fizzbuzz[59], "FizzBuzz")
 
-	def test_fizzbuzz_saves_non_fizzbuzzable_integers_to_list(self):
-		up_to_seventy_three = fizzbuzz.fizzbuzz(73)
-		self.assertIsInstance(up_to_seventy_three[0], int)
-		self.assertEqual(up_to_seventy_three[0], 1)
-		self.assertIsInstance(up_to_seventy_three[12], int)
-		self.assertEqual(up_to_seventy_three[12], 13)
-		self.assertIsInstance(up_to_seventy_three[-1], int)
-		self.assertEqual(up_to_seventy_three[-1], 73)
+    def test_fizzbuzz_saves_non_fizzbuzzable_integers_to_list(self):
+        up_to_seventy_three = fizzbuzz.fizzbuzz(73)
+        self.assertIsInstance(up_to_seventy_three[0], int)
+        self.assertEqual(up_to_seventy_three[0], 1)
+        self.assertIsInstance(up_to_seventy_three[12], int)
+        self.assertEqual(up_to_seventy_three[12], 13)
+        self.assertIsInstance(up_to_seventy_three[-1], int)
+        self.assertEqual(up_to_seventy_three[-1], 73)
 
-	def test_fizzbuzz_handles_zero(self):
-		zero = fizzbuzz.fizzbuzz(0)
-		self.assertIsInstance(zero, list)
-		self.assertListEqual(zero, [])
+    def test_fizzbuzz_handles_zero(self):
+        zero = fizzbuzz.fizzbuzz(0)
+        self.assertIsInstance(zero, list)
+        self.assertListEqual(zero, [])
 
-	def test_fizzbuzz_handles_negative_integers(self):
-		negative = fizzbuzz.fizzbuzz(-15)
-		self.assertIsInstance(negative, list)
-		self.assertListEqual(negative, [])
+    def test_fizzbuzz_handles_negative_integers(self):
+        negative = fizzbuzz.fizzbuzz(-15)
+        self.assertIsInstance(negative, list)
+        self.assertListEqual(negative, [])

@@ -29,11 +29,12 @@ import unittest
 
 from lessons.lesson_0_hello_world import hello_world
 
+
 class HelloWorldTestClass(unittest.TestCase):
     def test_hello_function_exists(self):
         func = hello_world.hello_world
         self.assertIsNotNone(func)
 
     def test_hello_function_output(self):
-    	greeting = hello_world.hello_world()
-    	self.assertEqual(greeting, "Hello World!")
+        greeting = hello_world.hello_world()
+        self.assertEqual(greeting, "Hello World!")
