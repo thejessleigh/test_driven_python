@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TDP: Lesson 2 Fizzbuzz</title>
+		<link href="../../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+	    <div class="header">
+        	<h1>Test Driven Python</h1>
+        	<h2>
+            	<a href="https://github.com/thejessleigh/test_driven_python">github</a>
+        	</h2>
+    	</div>
+    	<div class="nav">
+        	<h2>
+            	<a href="../../index.html">Home</a>
+        	</h2>
+        	<b>Lessons:</b>
+        	<ul>
+            	<li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
+            	<li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
+            	<li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
+                <li><a href="../lesson_3_calculator/index.html">Lesson 3: Calculator</a></li>
+        	</ul>
+            <h3>
+                <a href="../../credits.html">Credits</a>
+            </h3>
+    	</div>
+    	<div class="content">
+            <h1>Basic Calculator</h1>
+                <p>In this lesson you'll build a basic calculator script that has the following functions:</p>
+                    <ul>
+                        <li><code>add</code> accepts two integers and returns the sum of those integers</li>
+                        <li><code>subtract</code> accepts two integers and returns the first minus the second</li>
+                        <li><code>sum</code> accepts a
+                            <a href="../lesson_2_fizzbuzz/index.html#features_of_a_list"> list of integers</a> and
+                            returns the sum of all integers in the list.</li>
+                    </ul>
+
+            <h2>Lesson objectives</h2>
+
+            <ul>
+                <li>Perform basic mathematical operations</li>
+                <li>Learn to interact with list elements</li>
+                <li>Create a python file containing multiple functions</li>
+            </ul>
+
+            <h3>Challenge Rules:</h3>
+            <strong><code>add</code></strong>
+            <ol>
+                <li>The function should accept two integers</li>
+                <li>The function should return one integer equal to the sum of the two inputs</li>
+                <li>The function should work for positive and negative integers</li>
+            </ol>
+
+            <strong><code>subtract</code></strong>
+            <ol>
+                <li>The function should accept two integers</li>
+                <li>The function should return one integer equal to the first integer minus the second</li>
+                <li>The function should work for positive and negative integers</li>
+            </ol>
+
+            <strong><code>sum</code></strong>
+            <ol>
+                <li>The function should accept a list of integers</li>
+                <li>The function should return one integer equal to the sum of all the list elements</li>
+                <li>The function should work for a list of any size</li>
+                <li>The function should work for positive and negative integers</li>
+                <li>Edge case:
+                    <ul>
+                        <li>If the function receives an empty list, return 0</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Example</h3>
+            <div class="codeblock">
+                <code>add(2, 3) #=> 5</code>
+                <br><code>add(-2, 3) #=> 1</code>
+                <br><code>add(-10, -3) #=> -7</code>
+            </div>
+            <br>
+            <div class="codeblock">
+                <code>subtract(5, 3) #=> 2</code>
+                <br>
+                <code>subtract(10, -3) #=> 13</code>
+                <br>
+                <code>subtract(-12, -2) #=> -10</code>
+            </div>
+            <br>
+            <div class="codeblock">
+                <code>sum([1, 2, 3]) #=> 6</code>
+                <br>
+                <code>sum([2, 3]) #=> 5</code>
+                <br>
+                <code>sum([8, 4, -2]) #=> 10</code>
+                <br>
+                <code>sum([]) #=> 0</code>
+                <br>
+                <code>sum([0])   #=> 0</code>
+            </div>
+
+        </div>
+    	<div class="footer">
+            <a href="https://github.com/thejessleigh/test_driven_python">Test Driven Python</a>
+    	</div>
+	</body>
+</html>
