@@ -1,3 +1,11 @@
+# Create functions that perform basic calculations. You should create 3 functions
+
+# add should accept two integers and return the sum of those two integers
+# subtract should accept two integers and return the first integer minus the second
+# total_sum should accept a list of integers and return the total sum of all the array elements
+# note: if total_sum receives an empty list, it should return 0
+
+
 import unittest
 
 from lessons.lesson_3_calculator import calculator
