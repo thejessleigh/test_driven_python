@@ -1,0 +1,28 @@
+nav .brand-logo {
+  padding-left: 1em;
+}
+
+#dropdown1 a {
+  color: #303f9f !important;
+}
+
+#dropdown1 {
+  min-width: 300px;
+}
+
+.main {
+  padding-left: 2em;
+}
+
+code {
+  /*background-color: grey;*/
+  margin: 4em 2em;
+  padding: .5em 1em;
+}
+
+ul.browser-default li {
+  list-style-type: disc !important;
+  display: list-item;
+  margin-left: 1em;
+  margin-bottom: .3em;
+}
