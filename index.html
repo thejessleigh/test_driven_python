@@ -15,11 +15,18 @@
   <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
     <nav>
       <div class="nav-wrapper indigo darken-2">
         <a href="#" class="brand-logo">Test Driven Python</a>
+        <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="ttps://github.com/thejessleigh/test_driven_python">View on Github</a></li>
+          <li><a href="credits.html">Credits</a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Lessons<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+        <ul class="side-nav" id="mobile">
           <li><a href="ttps://github.com/thejessleigh/test_driven_python">View on Github</a></li>
           <li><a href="credits.html">Credits</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Lessons<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -42,7 +49,7 @@
 
       <h3>Introduction</h3>
       <div class="row">
-          <div class="col s12 m6">
+          <div class="col s12 m12 l6">
             <div class="card indigo lighten-5">
               <div class="card-content black-text">
                 <p>
@@ -55,7 +62,7 @@
 
       <h3>Setup</h3>
       <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
           <div class="card indigo lighten-5">
             <div class="card-content black-text">
               <span class="card-title">Install Python</span>
@@ -73,7 +80,7 @@
       </div>
 
       <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
           <div class="card indigo lighten-5">
             <div class="card-content black-text">
               <span class="card-title">Create your Virtualenv</span>
@@ -101,7 +108,7 @@
 
     	<h3> Next Steps </h3>
       <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
           <div class="card indigo lighten-5">
             <div class="card-content black-text">
         		<p> You should start with the first lesson (lesson_0_hello_world) to get a feel for how this course works. If you've finished that, fantastic! You'll now proceed through the lessons by opening the index.html file in each directory and following the instructions there. </p>
@@ -112,7 +119,7 @@
 
       <h3> Need Help? </h3>
       <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
           <div class="card indigo lighten-5">
             <div class="card-content black-text">
               <span class="card-title">Where do you go if something doesn't seem to be working?</span>
