@@ -1,157 +1,302 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>TDP: Lesson 0 Hello World!</title>
-		<link href="../../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-	    <div class="header">
-        	<h1>Test Driven Python</h1>
-        	<h2>
-            	<a href="https://github.com/thejessleigh/test_driven_python">github</a>
-        	</h2>
-    	</div>
-    	<div class="nav">
-        	<h2>
-            	<a href="../../index.html">Home</a>
-        	</h2>
-        	<b>Lessons:</b>
-        	<ul>
-            	<li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
-            	<li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
-            	<li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
+    <head>
+        <title>Test Driven Python</title>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="../../css/main.css" media="screen" rel="stylesheet">
+
+    </head>
+    <body>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../../js/materialize.min.js"></script>
+        <script type="text/javascript" src="../../js/main.js"></script>
+
+        <nav>
+            <div class="nav-wrapper indigo darken-2">
+                <a href="../../index.html" class="brand-logo">Test Driven Python</a>
+                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Lessons<i class="material-icons right">arrow_drop_down</i></a>
+                    </li>
+                    <li><a href="https://github.com/thejessleigh/test_driven_python">View on Github</a></li>
+                    <li><a href="../../credits.html">Credits</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile">
+                    <li><a href="https://github.com/thejessleigh/test_driven_python">View on Github</a></li>
+                    <li><a href="../../credits.html">Credits</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Lessons<i class="material-icons right">arrow_drop_down</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main">
+
+            <ul id="dropdown1" class="dropdown-content indigo-text text-darken-2">
+                <li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
+                <li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
+                <li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
                 <li><a href="../lesson_3_calculator/index.html">Lesson 3: Calculator</a></li>
                 <li><a href="../lesson_4_temperature/index.html">Lesson 4: Temperature</a></li>
                 <li><a href="../lesson_5_pig_latin/index.html">Lesson 5: Pig Latin</a></li>
                 <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
                 <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
-        	</ul>
+            </ul>
+
+            <ul id="dropdown2" class="dropdown-content indigo-text text-darken-2">
+                <li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
+                <li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
+                <li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
+                <li><a href="../lesson_3_calculator/index.html">Lesson 3: Calculator</a></li>
+                <li><a href="../lesson_4_temperature/index.html">Lesson 4: Temperature</a></li>
+                <li><a href="../lesson_5_pig_latin/index.html">Lesson 5: Pig Latin</a></li>
+                <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
+                <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
+            </ul>
+
+            <h3>Hello World!</h3>
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="card indigo lighten-5">
+                        <div class="card-content black-text">
+                            <p>
+                                This lesson is meant for absolute beginners in Python. We'll learn how to craft a
+                                <em>function</em> that says "Hello, World!".
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h3>Lesson objectives:</h3>
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="card indigo lighten-5">
+                        <div class="card-content black-text">
+                            <p>
+                            <ul class="browser-default">
+                                <li>
+                                    Create a <code class="inline">.py</code> file in the correct directory.
+                                </li>
+                                <li>
+                                    Understand how to define a <em>function</em> in Python.
+                                </li>
+                                <li>
+                                    Learn how to make a function <em>return</em> a value.
+                                </li>
+                            </ul>
+
+                            <p>
+                                This lesson teaches you how to define a Python function. Try running the tests for this lesson
+                                before doing
+                                anything else!
+                            </p>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Running Python Unit Tests</h3>
+
+
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="card indigo lighten-5">
+                        <div class="card-content black-text">
+                            <p>
+                                Here's a command that will allow you to run your tests from the top level directory of this
+                                project (the <code class="inline">test_driven_python</code>
+                                folder):
+                            </p>
+                            <code>python -m unittest -vf tests.test_lesson_0_hello_world</code>
+
+                            <p>
+                                That can look a little overwhelming at first, so let's break it down.
+                            </p>
+                            <ul class="browser-default">
+                                <li><code class="inline">python</code> indicates that we want to run something in Python</li>
+                                <li><code class="inline">-m</code> tells Python to run the module we want (<code class="inline">test.test_lesson_x</code>)
+                                    as
+                                    a script
+                                </li>
+                                <li><code class="inline">unittest</code> tells Python that we're running unit tests</li>
+                                <li><code class="inline">-vf</code> is a combination of two separate options:
+                                    <ul>
+                                        <!--TODO figure out what to do with lists inside lists-->
+                                        <li><code class="inline">-v</code> encourages Python to be as verbose as possible with
+                                            its output
+                                        </li>
+                                        <li><code class="inline">-f</code> tells Python to stop running the tests once it hits a
+                                            failure. This
+                                            is entirely
+                                            optional, but you should try doing this to fix one failure at a time while you get
+                                            the hang of how
+                                            Python works
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Finally, we tell Python which file it should run. In this case, that's
+                                    <code class="inline">tests.test_lesson_0_hello_world</code>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="card indigo lighten-5">
+                        <div class="card-content black-text">
+                            <span class="card-title">
+                                What error did you get when you first ran that command?
+                            </span>
+
+                            <p>
+                                <strong>Remember, errors are built to be <em>helpful</em>, not scary!</strong>
+                            </p>
+
+                            <p>
+                                You should have seen an <code class="inline">ImportError</code>. This is Python telling you that
+                                it's unable to
+                                import the
+                                module <code class="inline">hello_world</code> because there is no <code class="inline">hello_world.py</code>
+                                file in the
+                                lesson 0 directory.
+                            </p>
+                            So your first step should be to create <code class="inline">hello_world.py</code> in <code
+                                class="inline">lessons/lesson_0_hello_world</code>.
+                            </p>
+
+                            <p>
+                                Run the tests again. What's your next failure?
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <h3>
-                <a href="../../credits.html">Credits</a>
+                Defining a function in Python
             </h3>
-    	</div>
-    	<div class="content">
-			<h1>
-				Hello World!
-			</h1>
 
-			This lesson is meant for absolute beginners in Python. We'll learn how to craft a <em>function</em> that says "Hello, World!".
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="card indigo lighten-5">
+                        <div class="card-content black-text">
+                            <p>
+                                Functions in Python are defined by the <code>def</code> keyword, followed by your
+                                <em>function</em> name. After
+                                your function name there are two parenthases followed by a colon, <code> (): </code>. If you're
+                                defining a
+                                function that accepts <em>arguments</em> this is where they'll go. Don't worry about arguments
+                                for now, though.
+                                We'll cover those in the next lesson.
+                            </p>
 
-			<h2>Lesson objectives:</h2>
-			<ul>
-				<li>
-					Create a <code>.py</code> file in the correct directory.
-				</li>
-				<li>
-					Understand how to define a <em>function</em> in Python.
-				</li>
-				<li>
-					Learn how to make a function <em>return</em> a value.
-				</li>
-			</ul>
+                            <p>
+                                Python operates using <em>significant whitespace</em>. This means that each time you enter a new
+                                function or
+                                logical block, you need to indent your code by 4 spaces. Python knows when you're done with your
+                                block when you
+                                unindent by 4 spaces.
+                            </p>
 
-			<p>
-				This lesson teaches you how to define a Python function. Try running the tests for this lesson before doing anything else!
-			</p>
+                            <code>
+                                def does_something():
+                            </code>
+                            <br>
+                            <code>
+                                &nbsp;&nbsp;&nbsp;&nbsp;print "something"
+                            </code>
 
-			<h3>Running Python Unit Tests</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<p>
-				Here's a command that will allow you to run your tests from the top level directory of this project (the <code>test_driven_python</code> folder):
-			</p>
-			<div class='codeblock'>
-				<code>
-					python -m unittest -vf tests.test_lesson_0_hello_world
-				</code>
-			</div>
 
-			<p>
-				That can look a little overwhelming at first, so let's break it down.
-				<ul>
-					<li><code>python</code> indicates that we want to run something in Python</li>
-					<li><code>-m</code> tells Python to run the module we want (<code>test.test_lesson_x</code>) as a script</li>
-					<li><code>unittest</code> tells Python that we're running unit tests</li>
-					<li><code>-vf</code> is a combination of two separate options:
-						<ul>
-							<li><code>-v</code> encourages Python to be as verbose as possible with its output</li>
-							<li><code>-f</code> tells Python to stop running the tests once it hits a failure. This is entirely optional, but you should try doing this to fix one failure at a time while you get the hang of how Python works</li>
-						</ul>
-					</li>
-					<li>
-						Finally, we tell Python which file it should run. In this case, that's <code>tests.test_lesson_0_hello_world</code>
-					</li>
-				</ul>
-			</p>
+            <h3>Print vs Return</h3>
 
-			<p>
-				What error did you get when you first ran that command?
-			</p>
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="card indigo lighten-5">
+                        <div class="card-content black-text">
+                            <p>
+                                Two core concepts to think about when using Python are <code>print</code> and
+                                <code>return</code>.
+                            </p>
 
-			<p>
-				<strong>Remember, errors are built to be <em>helpful</em>, not scary!</strong>
-			</p>
+                            <p>
+                                <code><strong>print</strong></code> takes something in your function and prints it out into your
+                                terminal for
+                                you to read. This is a great way to see what's going on inide your function while it's running.
+                                <code>print</code> is incredibly useful for debugging, but does not provide your program with
+                                any useful
+                                information. <code>print</code> is for human use only.
+                            </p>
 
-			<p>
-				You should have seen an <code>ImportError</code>. This is Python telling you that it's unable to import the module <code>hello_world</code> because there is no <code>hello_world.py</code> file in the lesson 0 directory.
-			</p>
-				So your first step should be to create <code>hello_world.py</code> in <code>lessons/lesson_0_hello_world</code>
-			</p>
+                            <p>
+                                <code><strong>return</strong></code> is the keyword that lets Python know that you're ready to
+                                exit the function
+                                with the value on that line. <code>return</code> provides useful information to the computer so
+                                that computed
+                                values can be passed from one function to another. Whenever you want to set something as the
+                                <em>result</em> of
+                                your function, use <code>return</code>. Remember that this will exit the function. You should
+                                never have any
+                                logic in your function that is unreachable after the <code>return</code> statement.
+                            </p>
 
-			<p>
-				Run the tests again. What's your next failure?
-			</p>
+                            <p>
+                                Note: if you've used other programming lanugages before, you might have come across the idea of
+                                implicit
+                                returns, meaning that the last variable in the top level scope of the function will always be
+                                returned. This is
+                                <strong>not</strong> the case in Python. If you want your function to return something, you must
+                                always
+                                explicitly state it, otherwise your function will return <strong><code>None</code></strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<h3>
-				Defining a function in Python
-			</h3>
 
-			<p>
-				Functions in Python are defined by the <code>def</code> keyword, followed by your <em>function</em> name. After your function name there are two parenthases followed by a colon, <code> (): </code>. If you're defining a function that accepts <em>arguments</em> this is where they'll go. Don't worry about arguments for now, though. We'll cover those in the next lesson.
-			</p>
+            <h3>Finishing the challenge</h3>
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="card indigo lighten-5">
+                        <div class="card-content black-text">
+                            <p>
+                                Now that you have your <code>hello_world.py</code> file, edit it to include a function that
+                                <em>returns</em>
+                                the
+                                string "Hello World!" Once you've edited your file, keep running your tests and amending
+                                your code until all
+                                of
+                                your tests pass. You'll know you're done when the output on your terminal reads:
+                            </p>
+                            <code>Ran 2 tests in 0.000s OK</code>
+                            <p>
+                                That means that you've passed all the tests and completed the challenge!<br> You're ready to
+                                move on to <a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a>!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<p>
-				Python operates using <em>significant whitespace</em>. This means that each time you enter a new function or logical block, you need to indent your code by 4 spaces. Python knows when you're done with your block when you unindent by 4 spaces.
-			</p>
-
-			<div class="codeblock">
-				<code>
-					def does_something():
-					<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;print "something"
-				</code>
-			</div>
-
-			<h3>Print vs Return</h3>
-
-			<p>
-				Two core concepts to think about when using Python are <code>print</code> and <code>return</code>.
-			</p>
-
-			<p>
-				<code><strong>print</strong></code> takes something in your function and prints it out into your terminal for you to read. This is a great way to see what's going on inide your function while it's running. <code>print</code> is incredibly useful for debugging, but does not provide your program with any useful information. <code>print</code> is for human use only.
-			</p>
-
-			<p>
-				<code><strong>return</strong></code> is the keyword that lets Python know that you're ready to exit the function with the value on that line. <code>return</code> provides useful information to the computer so that computed values can be passed from one function to another. Whenever you want to set something as the <em>result</em> of your function, use <code>return</code>. Remember that this will exit the function. You should never have any logic in your function that is unreachable after the <code>return</code> statement.
-			</p>
-
-			<p>
-				Note: if you've used other programming lanugages before, you might have come across the idea of implicit returns, meaning that the last variable in the top level scope of the function will always be returned. This is <strong>not</strong> the case in Python. If you want your function to return something, you must always explicitly state it, otherwise your function will return <strong><code>None</code></strong>.
-			</p>
-
-			<h3>Finishing the challenge</h3>
-
-			<p>
-				Now that you have your <code>hello_world.py</code> file, edit it to include a function that <em>returns</em> the string "Hello World!" Once you've edited your file, keep running your tests and amending your code until all of your tests pass. You'll know you're done when the output on your terminal reads:
-				<div class="codeblock">
-					<code>Ran 2 tests in 0.000s OK</code>
-				</div>
-				That means that you've passed all the tests and completed the challenge!<br> You're ready to move on to <a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a>!
-			</p>
-		</div>
-		<div class="footer">
-	        <a href="https://github.com/thejessleigh/test_driven_python">Test Driven Python</a>
-		</div>
-
-	</body>
+        </div>
+    </body>
 </html>
