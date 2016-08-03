@@ -1,186 +1,318 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>TDP: Lesson 2 Fizzbuzz</title>
-		<link href="../../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-	    <div class="header">
-        	<h1>Test Driven Python</h1>
-        	<h2>
-            	<a href="https://github.com/thejessleigh/test_driven_python">github</a>
-        	</h2>
-    	</div>
-    	<div class="nav">
-        	<h2>
-            	<a href="../../index.html">Home</a>
-        	</h2>
-        	<b>Lessons:</b>
-        	<ul>
-            	<li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
-            	<li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
-            	<li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
-                <li><a href="../lesson_3_calculator/index.html">Lesson 3: Calculator</a></li>
-                <li><a href="../lesson_4_temperature/index.html">Lesson 4: Temperature</a></li>
-                <li><a href="../lesson_5_pig_latin/index.html">Lesson 5: Pig Latin</a></li>
-                <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
-                <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
-        	</ul>
-            <h3>
-                <a href="../../credits.html">Credits</a>
-            </h3>
-    	</div>
-    	<div class="content">
-            <h1>FizzBuzz</h1>
-            <p>
-                Fizzbuzz is a common coding challenge that teaches control flow and use of the modulus operator.
-            </p>
+<head>
+    <title>Test Driven Python</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
 
-            <p>
-                Some FizzBuzz challenges you can find online will have you print out the result for each number from 1 to x.
-                In this challenge, however, we'll save all of the 'Fizzbuzzed' results to a list and return the list at the end of the function.
-            </p>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="../../css/main.css" media="screen" rel="stylesheet">
 
-            <h2>Lesson objectives</h2>
+</head>
+<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/materialize.min.js"></script>
+<script type="text/javascript" src="../../js/main.js"></script>
 
-            <ul>
-                <li>Understand how to assign variables within a function</li>
-                <li>Understand how to use the mouduls operator</li>
-                <li>Get comfortable with basic control flow</li>
-                <li>Understand how to initialize and add items to a list</li>
-            </ul>
+<nav>
+    <div class="nav-wrapper indigo darken-2">
+        <a href="../../index.html" class="brand-logo">Test Driven Python</a>
+        <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Lessons<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+            <li><a href="https://github.com/thejessleigh/test_driven_python">View on Github</a></li>
+            <li><a href="../../credits.html">Credits</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile">
+            <li><a href="https://github.com/thejessleigh/test_driven_python">View on Github</a></li>
+            <li><a href="../../credits.html">Credits</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Lessons<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="main">
 
-            <h3>Modulus operator</h3>
-            <p>
-                Modulus is a useful mathematical operation available in Python using the <code>&#37;</code> symbol. It returns the remainder of two numbers when you divide x by y. For example: 
-            </p>
+    <ul id="dropdown1" class="dropdown-content indigo-text text-darken-2">
+        <li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
+        <li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
+        <li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
+        <li><a href="../lesson_3_calculator/index.html">Lesson 3: Calculator</a></li>
+        <li><a href="../lesson_4_temperature/index.html">Lesson 4: Temperature</a></li>
+        <li><a href="../lesson_5_pig_latin/index.html">Lesson 5: Pig Latin</a></li>
+        <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
+        <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
+    </ul>
 
-            <div class="codeblock">
-                <code>
-                    10 &#37; 2 # == 0 because 10 is divisible by 2
-                </code>
-                <br>
-                <code>
-                    8 &#37; 3 # == 2 because 2 is the remainder of 8 / 3
-                </code>
+    <ul id="dropdown2" class="dropdown-content indigo-text text-darken-2">
+        <li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
+        <li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
+        <li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
+        <li><a href="../lesson_3_calculator/index.html">Lesson 3: Calculator</a></li>
+        <li><a href="../lesson_4_temperature/index.html">Lesson 4: Temperature</a></li>
+        <li><a href="../lesson_5_pig_latin/index.html">Lesson 5: Pig Latin</a></li>
+        <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
+        <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
+    </ul>
+
+    <h3>FizzBuzz</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        Fizzbuzz is a common coding challenge that teaches control flow and use of the modulus operator.
+
+                    </p>
+                    <p>
+                        Some FizzBuzz challenges you can find online will have you print out the result for each number
+                        from 1 to x.
+                        In this challenge, however, we'll save all of the 'Fizzbuzzed' results to a list and return the
+                        list at the end
+                        of the function.
+                    </p>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <h3>Control flow</h3>
-            <p>
-                Control flow is the process by which we tell a program how to make decisions based on certain criteria. If one condition is <code>True</code>, you instruct the program to do one thing. If it's not, you tell the program to do something else.
-            </p>
+    <h2>Lesson objectives</h2>
 
-            <p>
-                Control flow in Python is fairly readable. For example:
-            </p>
-
-            <div class="codeblock">
-                <code>
-                    x = 2
-                    <br>
-                    if x > 2:
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print "x is greater than 2"
-                    <br>
-                    else:
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print "x is less than or equal to 2"
-                </code>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ul class="browser-default">
+                        <li>Understand how to assign variables within a function</li>
+                        <li>Understand how to use the mouduls operator</li>
+                        <li>Get comfortable with basic control flow</li>
+                        <li>Understand how to initialize and add items to a list</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <p>
-                However, Python doesn't limit us to just two options. We can check for multiple conditions in our control flow with the <code>elif</code> keyword.
-            </p>
+    <h3>Modulus operator</h3>
 
-            <div class="codeblock">
-                <code>
-                    x = 2
-                    <br>d
-                    if x > 2:
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        Modulus is a useful mathematical operation available in Python using the <code class="inline">
+                        &#37;</code>
+                        symbol. It returns
+                        the remainder of two numbers when you divide x by y. For example:
+                    </p>
+
+                    <code>
+                        10 &#37; 2 # == 0 because 10 is divisible by 2
+                    </code>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print "x is greater than 2"
-                    <br>
-                    elif x == 2:
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print "x equals 2"
-                    <br>
-                    elif x == 0:
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print "x is zero"
-                    <br>
-                    else:
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print "x is less than 2"
-                </code>
+                    <code>
+                        8 &#37; 3 # == 2 because 2 is the remainder of 8 / 3
+                    </code>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <p>
-                The <code>else</code> keyword lets us know that if we've passed through <em>all</em> of our specifically listed conditions and didn't find anything, it should do this. It acts as the "base case" for what to do when no other condition is satisfied.
-            </p>
+    <h3>Control flow</h3>
 
-            <h3 id="features_of_a_list">Features of a list</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        Control flow is the process by which we tell a program how to make decisions based on certain
+                        criteria. If one
+                        condition is <code class="inline">True</code>, you instruct the program to do one thing. If it's
+                        not, you tell
+                        the program to
+                        do something else.
+                    </p>
+                    <p>
+                        Control flow in Python is fairly readable. For example:
+                    </p>
 
-            <p>
-                If you've worked in other programming langauges before, or if you're familiar with different structures in math, a list is Python's name for an array. 
-            </p>
+                    <code>
+                        x = 2
+                    </code>
+                    <br>
+                    <code>
+                        if x > 2:
+                    </code>
+                    <br>
+                    <code>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print "x is greater than 2"
+                    </code>
+                    <br>
+                    <code>
+                        else:
+                    </code>
+                    <code>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print "x is less than or equal to 2"
+                    </code>
 
-            <ul>
-                <li>
-                    Python initializes an empty list with two empty square brackets: <code>[]</code>
-                </li>
-                <li>
-                    A list can hold any number of items. The items do not need to be the same type.
-                </li>
-                <li>
-                    Lists are ordered. That means that to access a value inside the list, you need to know what position it occupies in the list.
-                </li>
-                <li>
-                    List positions, or "indexes" (or "indicies" - both are correct and people will use them interchangeably), start counting at <code>0</code>, not <code>1</code>.
-                </li>
-            </ul>
+                    <p>
+                        However, Python doesn't limit us to just two options. We can check for multiple conditions in
+                        our control flow
+                        with the <code class="inline">elif</code> keyword.
+                    </p>
 
-            <h3>Challenge Rules:</h3>
-            <ul>
-                <li>
-                    The function should accept an integer
-                </li>
-                <li>
-                    For every integer between 1 and the input the function should save one of four options to an list
-                </li>
-                    <ol>
+                    <code>
+                        x = 2
+                    </code>
+                    <br>
+                    <code>
+                        if x > 2:
+                    </code>
+                    <br>
+                    <code>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print "x is greater than 2"
+                    </code>
+                    <br>
+                    <code>
+                        elif x == 2:
+                    </code>
+                    <br>
+                    <code>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print "x equals 2"
+                    </code>
+                    <br>
+                    <code>
+                        elif x == 0:
+                    </code>
+                    <br>
+                    <code>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print "x is zero"
+                    </code>
+                    <br>
+                    <code>
+                        else:
+                    </code>
+                    <br>
+                    <code>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print "x is less than 2"
+                    </code>
+
+                    <p>
+                        The <code class="inline">else</code> keyword lets us know that if we've passed through
+                        <em>all</em> of our
+                        specifically listed
+                        conditions and didn't find anything, it should do this. It acts as the "base case" for what to
+                        do when no other
+                        condition is satisfied.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 id="features_of_a_list">Features of a list</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+
+                    <p>
+                        If you've worked in other programming langauges before, or if you're familiar with different
+                        structures in math,
+                        a list is Python's name for an array.
+                    </p>
+
+                    <ul class="browser-default">
                         <li>
-                            If the integer is divisible by 3, save the word "Fizz" to the list
+                            Python initializes an empty list with two empty square brackets: <code
+                                class="inline">[]</code>
                         </li>
                         <li>
-                            If the integer is divisible by 5, save the word "Buzz" to the list
+                            A list can hold any number of items. The items do not need to be the same type.
                         </li>
                         <li>
-                            If the integer is divisible by both 3 and 5, save the word "FizzBuzz" to the list
+                            Lists are ordered. That means that to access a value inside the list, you need to know what
+                            position it
+                            occupies in the list.
                         </li>
                         <li>
-                            If the integer is divisible by neither 3 nor 5, save that integer to the list
+                            List positions, or "indexes" (or "indicies" - both are correct and people will use them
+                            interchangeably),
+                            start counting at <code class="inline">0</code>, not <code class="inline">1</code>.
                         </li>
-                    </ol>
-                <li>
-                    The function should return a list of integers and strings
-                </li>
-                <li>
-                    Edge cases
-                        <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Challenge Rules:</h3>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ul class="browser-default">
+                        <li>
+                            The function should accept an integer
+                        </li>
+                        <li>
+                            For every integer between 1 and the input the function should save one of four options to an
+                            list
+                        </li>
+                        <ol>
                             <li>
-                                If the integer input is &lt;= 0, return an emtpy list
+                                If the integer is divisible by 3, save the word "Fizz" to the list
                             </li>
-                        </ul>
-                </li>
-            </ul>
+                            <li>
+                                If the integer is divisible by 5, save the word "Buzz" to the list
+                            </li>
+                            <li>
+                                If the integer is divisible by both 3 and 5, save the word "FizzBuzz" to the list
+                            </li>
+                            <li>
+                                If the integer is divisible by neither 3 nor 5, save that integer to the list
+                            </li>
+                        </ol>
+                        <li>
+                            The function should return a list of integers and strings
+                        </li>
+                        <li>
+                            Edge cases
+                            <ul>
+                                <li>
+                                    If the integer input is &lt;= 0, return an emtpy list
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
 
-            <h3>Example</h3>
-            <div class="codeblock">
-                <code>fizzbuzz(15) #=> [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"]</code>
+                </div>
             </div>
-    	</div>
-    	<div class="footer">
-            <a href="https://github.com/thejessleigh/test_driven_python">Test Driven Python</a>
-    	</div>
-	</body>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <span class="card-title">Example</span>
+                    <br>
+
+                    <code>fizzbuzz(15) #=> [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14,
+                        "FizzBuzz"]</code>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>

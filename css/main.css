@@ -31,3 +31,7 @@ ul.browser-default li {
   margin-left: 1em;
   margin-bottom: .3em;
 }
+
+p {
+  padding: 1em;
+}
