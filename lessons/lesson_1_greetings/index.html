@@ -1,145 +1,243 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>TDP: Lesson 1 Greetings</title>
-		<link href="../../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-	    <div class="header">
-        	<h1>Test Driven Python</h1>
-        	<h2>
-            	<a href="https://github.com/thejessleigh/test_driven_python">github</a>
-        	</h2>
-    	</div>
-    	<div class="nav">
-        	<h2>
-            	<a href="../../index.html">Home</a>
-        	</h2>
-        	<b>Lessons:</b>
-        	<ul>
-            	<li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
-            	<li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
-            	<li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
-                <li><a href="../lesson_3_calculator/index.html">Lesson 3: Calculator</a></li>
-                <li><a href="../lesson_4_temperature/index.html">Lesson 4: Temperature</a></li>
-                <li><a href="../lesson_5_pig_latin/index.html">Lesson 5: Pig Latin</a></li>
-                <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
-                <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
-        	</ul>
-	        <h3>
-                <a href="../../credits.html">Credits</a>
-            </h3>
-    	</div>
-    	<div class="content">
-			<h1>
-				Personalized Greetings
-			</h1>
-			<p>
-				Instead of printing a generic output, like we did in <a href="../lesson_0_hello_world/index.html">Lesson 0</a>, this time we'll create a function that takes an input and creates a customized greeting for whatever name you feed into the function.
-			</p>
-			<h2>Lesson objectives:</h2>
-			<ul>
-				<li>
-					Understand how to define a function that accepts inputs (<em>arguments</em>)
-				</li>
-				<li>
-					Learn how to use a function's arguments inside your function
-				</li>
-				<li>Understand basic <em>string interpolation</em></li>
-			</ul>
-			<h3>
-				Defining a function that accepts arguments
-			</h3>
+<head>
+    <title>Test Driven Python</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
 
-			<p>
-				In <a href="../lesson_0_hello_world/index.html">Lesson 0</a> we learned how to define a basic function in Python. This time, we'll create a function that's slightly more complicated.
-			</p>
+    <!--Add favicon-->
+    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
 
-			<p>
-				Instead of using empty parenthases when defining the name of the funtion, we can fill those parenthases with <em>argument names</em>. These are variables that we pass into the function that we can use later.
-			</p>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="../../css/main.css" media="screen" rel="stylesheet">
 
-			<div class="codeblock">
-				<code>
-					def repeat_my_argument(argument):
-					<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;print argument + "!"
-				</code>
-			</div>
+</head>
+<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/materialize.min.js"></script>
+<script type="text/javascript" src="../../js/main.js"></script>
 
-			<p>
-				That simple function above takes a variable and prints it out with an extra "!" on th end. It's a simplistic example, but it illustrates how we can use arguments inside a function to alter our output.
-			</p>
+<nav>
+    <div class="nav-wrapper indigo darken-2">
+        <a href="../../index.html" class="brand-logo">Test Driven Python</a>
+        <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Lessons<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+            <li><a href="https://github.com/thejessleigh/test_driven_python">View on Github</a></li>
+            <li><a href="../../credits.html">Credits</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile">
+            <li><a href="https://github.com/thejessleigh/test_driven_python">View on Github</a></li>
+            <li><a href="../../credits.html">Credits</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Lessons<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="main">
 
-			<h3>String Interpolation</h3>
+    <ul id="dropdown1" class="dropdown-content indigo-text text-darken-2">
+        <li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
+        <li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
+        <li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
+        <li><a href="../lesson_3_calculator/index.html">Lesson 3: Calculator</a></li>
+        <li><a href="../lesson_4_temperature/index.html">Lesson 4: Temperature</a></li>
+        <li><a href="../lesson_5_pig_latin/index.html">Lesson 5: Pig Latin</a></li>
+        <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
+        <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
+    </ul>
 
-			<p>
-				<em>String interpolation</em> is the name for inserting a variable into a string so that we can alter the end state of that string. For example, if we had a family with the last name "Smith," and we wanted to create a function that takes in a first name and outputs their whole name, it might look something like this:
-			</p>
+    <ul id="dropdown2" class="dropdown-content indigo-text text-darken-2">
+        <li><a href="../lesson_0_hello_world/index.html">Lesson 0: Hello World</a></li>
+        <li><a href="../lesson_1_greetings/index.html">Lesson 1: Greetings</a></li>
+        <li><a href="../lesson_2_fizzbuzz/index.html">Lesson 2: FizzBuzz</a></li>
+        <li><a href="../lesson_3_calculator/index.html">Lesson 3: Calculator</a></li>
+        <li><a href="../lesson_4_temperature/index.html">Lesson 4: Temperature</a></li>
+        <li><a href="../lesson_5_pig_latin/index.html">Lesson 5: Pig Latin</a></li>
+        <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
+        <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
+    </ul>
 
-			<div class="codeblock">
-				<code>
-					def smith_full_name(first_name):
-					<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;return "{} Smith".format(first_name)
-					<br><br>
-					smith_full_name("Ellen") #=> "Ellen Smith"
-				</code>
-			</div>
+    <h3>
+        Personalized Greetings
+    </h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        Instead of printing a generic output, like we did in <a
+                            href="../lesson_0_hello_world/index.html">Lesson 0</a>, this time we'll create a function
+                        that takes an input and creates a customized greeting for whatever name you feed into the
+                        function.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<p>
-				In that example, we provided the name "Ellen" to the function, and it inserted it into the string using the <code>.format</code> method.
-			</p>
+    <h3>Lesson objectives:</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ul class="browser-default">
+                        <li>
+                            Understand how to define a function that accepts inputs (<em>arguments</em>)
+                        </li>
+                        <li>
+                            Learn how to use a function's arguments inside your function
+                        </li>
+                        <li>Understand basic <em>string interpolation</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<h3>Challenge Rules:</h3>
-			<ul>
-				<li>
-					Create a Python file called <code>greetings.py</code> in the <code>lessons/lesson_1_greetings</code> directory
-				</li>
-				<li>
-					Create a function called <code>greetings</code> in the <code>greetings.py</code> file
-				</li>
-				<li>
-					The function should accept a single string as an <em>argument</em>
-				</li>
-				<li>
-					The function should return <code>"Hi, " + <em>argument</em> + "!"</code>
-				</li>
-			</ul>
+    <h3>
+        Defining a function that accepts arguments
+    </h3>
 
-			<h3>Example</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        In <a href="../lesson_0_hello_world/index.html">Lesson 0</a> we learned how to define a basic
+                        function in
+                        Python. This time, we'll create a function that's slightly more complicated.
+                    </p>
 
-			<div class="codeblock">
-				<code>
-					greetings("Jill") #=> "Hi, Jill!"
-				</code>
-			</div>
+                    <p>
+                        Instead of using empty parenthases when defining the name of the funtion, we can fill those
+                        parenthases with
+                        <em>argument names</em>. These are variables that we pass into the function that we can use
+                        later.
+                    </p>
+                    <code>
+                        def repeat_my_argument(argument):
+                    </code>
+                    <br>
+                    <code>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print argument + "!"
+                    </code>
 
-			<h3>Running the exercise</h3>
+                    <p>
+                        That simple function above takes a variable and prints it out with an extra "!" on th end. It's
+                        a simplistic
+                        example, but it illustrates how we can use arguments inside a function to alter our output.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<p>
-				Let's run our unit test command in the terminal again, but with the correct module name for our lesson 1 tests.
-			</p>
+    <h3>String Interpolation</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        <em>String interpolation</em> is the name for inserting a variable into a string so that we can
+                        alter the end
+                        state of that string. For example, if we had a family with the last name "Smith," and we wanted
+                        to create a
+                        function that takes in a first name and outputs their whole name, it might look something like
+                        this:
+                    </p>
 
-			<p>
-				<code class="codeblock">python -m unittest -vf tests.test_lesson_1_greetings</code>
-			</p>
+                    <code>
+                        def smith_full_name(first_name):
+                    </code>
+                    <br>
+                    <code>
+                        &nbsp;&nbsp;&nbsp;&nbsp;return "{} Smith".format(first_name)
+                    </code>
+                    <br><br>
+                    <code>
+                        smith_full_name("Ellen") #=> "Ellen Smith"
+                    </code>
 
-			<p>
-				Again, you should have seen an <code>ImportError</code> that indicates we need a certain file that doesn't exist yet. So let's create <code>greetings.py</code> in <code>lessons/lesson_1_greetings</code>.
-			</p>
+                    <p>
+                        In that example, we provided the name "Ellen" to the function, and it inserted it into the
+                        string using the
+                        <code class="inline">.format</code> method.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Challenge Rules:</h3>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ul class="browser-default">
+                        <li>
+                            Create a Python file called <code class="inline">greetings.py</code> in the <code
+                                class="inline">lessons/lesson_1_greetings</code>
+                            directory
+                        </li>
+                        <li>
+                            Create a function called <code class="inline">greetings</code> in the <code class="inline">greetings.py</code>
+                            file
+                        </li>
+                        <li>
+                            The function should accept a single string as an <em>argument</em>
+                        </li>
+                        <li>
+                            The function should return <code class="inline">"Hi, " + argument + "!"</code>
+                        </li>
+                    </ul>
+
+                    <span class="card-title">Example</span>
+                    <br>
+                    <code>greetings("Jill") #=> "Hi, Jill!"</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Running the exercise</h3>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        Let's run our unit test command in the terminal again, but with the correct module name for our
+                        lesson 1 tests.
+
+                    </p>
+
+                        <code>python -m unittest -vf tests.test_lesson_1_greetings</code>
 
 
-			<p>
-				Run your tests again and fix each failure as it comes up. You'll know you're done when your output says:
-				<div class="codeblock">
-					<code>Ran 3 tests in 0.000s OK</code>
-				</div>
-				Congratulations, you're ready for <a href="../lesson_2_fizzbuzz/index.html">Lesson 2</a>!
-			</p>
-		</div>
-		<div class="footer">
-        	<a href="https://github.com/thejessleigh/test_driven_python">Test Driven Python</a>
-		</div>
-	</body>
+                    <p>
+                        Again, you should have seen an <code class="inline">ImportError</code> that indicates we need a certain file
+                        that doesn't exist
+                        yet. So let's create <code class="inline">greetings.py</code> in <code class="inline">lessons/lesson_1_greetings</code>.
+                    </p>
+
+                    <p>
+                        Run your tests again and fix each failure as it comes up. You'll know you're done when your
+                        output says:
+                        </p>
+                        <code>Ran 3 tests in 0.000s OK</code>
+                    <p>
+                    Congratulations, you're ready for <a href="../lesson_2_fizzbuzz/index.html">Lesson 2</a>!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
