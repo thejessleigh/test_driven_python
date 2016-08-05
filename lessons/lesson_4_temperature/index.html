@@ -61,16 +61,166 @@
         <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
         <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
     </ul>
-    <h3></h3>
+
+    <h3>Temperature</h3>
     <div class="row">
         <div class="col s12 m12 l6">
             <div class="card indigo lighten-5">
                 <div class="card-content black-text">
+                    <p>
+                        In this lesson you'll build two functions, <code class="inline">f_to_c</code> and <code
+                            class="inline">c_to_f</code> that will
+                        convert
+                        readings from one scale into another. For this particular example, we don't want to have to deal
+                        with
+                        decimal precision, so each function should return an <em>integer</em> reading after the
+                        conversion.
+                    </p>
 
                 </div>
             </div>
         </div>
     </div>
+
+    <h3>Fahrenheit and Celsius</h3>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        One of the key differences between Fahrenheit and Celsius is that the freezing point of water is
+                        0 degrees
+                        on the Celsius scale, and 32 degrees on the Fahrenheit scale.
+
+                    </p>
+
+                    <p>
+                        Beyond that, each degree of Fahrenheit is 5/9 of one degree Celsius.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>How is a float different than an integer?</h3>
+
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        <em>floats</em> are a data type in Python that represent numbers. They're different from <em>integers</em>
+                        because <em>floats</em> can represent a larger subset of numbers. <em>floats</em> have decimal
+                        points.
+                        <em>integers</em> will always represent "whole" numbers.
+                    </p>
+
+                    <p>
+                        When doing integer math in Python, it will always round <em>down</em>.
+                    </p>
+
+                    <p>
+                        Python2 uses integer math for math operations when you input integers.
+                    </p>
+
+                    <code> 5 / 3 = 1 </code>
+
+                    <p>However, Python3 uses <em>float</em> math when dividing, so instead you'll get</p>
+
+                    <code> 5 / 3 = 1.6666666666666667 </code>
+                    <p>
+                        Your code implementation for this challenge will be different based on which version of python
+                        you're
+                        using. If you aren't sure whether you're using Python2 or Python3 type <code class="inline">python
+                        --version</code>
+                        in your terminal with your virtualenv activated. It will print out your current version.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Lesson objectives</h3>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ul class="browser-default">
+                        <li>Floating point math</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>Challenge Rules:</h3>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <span class="card-title"><code class="inline">f_to_c</code></span><br>
+                    <ul class="browser-default">
+                        <li>Accepts a float</li>
+                        <li>Converts a Fahrenheit reading to Celsius</li>
+                        <li>Returns an integer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <span class="card-title"><code class="inline">c_to_f</code></span><br>
+                    <ul class="browser-default">
+                        <li>Accepts a float</li>
+                        <li>Converts a Celsius reading to Fahrenheit</li>
+                        <li>Returns an integer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>Example</h3>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <span class="card-title"><em>freezing point</em></span><br>
+                    <code>f_to_c(32) #=> 0</code>
+                    <br>
+                    <code>c_to_f(0) #=> 32</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <span class="card-title"><em>boiling point</em></span><br>
+                    <code>f_to_c(212) #=> 100</code>
+                    <br>
+                    <code>c_to_f(100) #=> 212</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
