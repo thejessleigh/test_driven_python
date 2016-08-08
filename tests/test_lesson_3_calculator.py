@@ -1,9 +1,18 @@
-# Create functions that perform basic calculations. You should create 3 functions
+# In this lesson you'll create several functions to perform basic calculations
 
-# add should accept two integers and return the sum of those two integers
-# subtract should accept two integers and return the first integer minus the second
-# total_sum should accept a list of integers and return the total sum of all the array elements
-# note: if total_sum receives an empty list, it should return 0
+# Run your tests to get your first failure. Try reading the tests first to anticipate which failures
+# you'll run into.
+
+# `python -m unittest -vf tests.test_lesson_3_calculator`
+
+# You should create 3 functions:
+
+# `add` should accept two integers and return the sum of those two integers
+# `subtract` should accept two integers and return the first integer minus the second
+# `total_sum` should accept a list of integers and return the total sum of all the array elements
+#       note: if total_sum receives an empty list, it should return 0
+
+# All three functions should be able to handle both positive and negative integers
 
 
 import unittest
