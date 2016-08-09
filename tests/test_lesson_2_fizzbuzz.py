@@ -31,7 +31,6 @@ class FizzBuzzTestCase(unittest.TestCase):
         twelve = fizzbuzz.fizzbuzz(12)
         self.assertIsInstance(twelve, list)
 
-
     def test_fizzbuzz_list_is_the_correct_length(self):
         twelve = fizzbuzz.fizzbuzz(12)
         self.assertEqual(len(twelve), 12)
@@ -53,10 +52,10 @@ class FizzBuzzTestCase(unittest.TestCase):
 
     def test_fizzbuzz_handles_multiples_of_3_and_5(self):
         up_to_eighty = fizzbuzz.fizzbuzz(60)
-        self.assertEqual(fizzbuzz[14], "FizzBuzz")
-        self.assertEqual(fizzbuzz[29], "FizzBuzz")
-        self.assertEqual(fizzbuzz[44], "FizzBuzz")
-        self.assertEqual(fizzbuzz[59], "FizzBuzz")
+        self.assertEqual(up_to_eighty[14], "FizzBuzz")
+        self.assertEqual(up_to_eighty[29], "FizzBuzz")
+        self.assertEqual(up_to_eighty[44], "FizzBuzz")
+        self.assertEqual(up_to_eighty[59], "FizzBuzz")
 
     def test_fizzbuzz_saves_non_fizzbuzzable_integers_to_list(self):
         up_to_seventy_three = fizzbuzz.fizzbuzz(73)
