@@ -5,20 +5,20 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../style/css/materialize.min.css" media="screen,projection"/>
 
     <!--Add favicon-->
-    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../style/assets/favicon.ico" type="image/x-icon"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="../../css/main.css" media="screen" rel="stylesheet">
+    <link href="../../style/css/main.css" media="screen" rel="stylesheet">
 
 </head>
 <body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../../js/materialize.min.js"></script>
-<script type="text/javascript" src="../../js/main.js"></script>
+<script type="text/javascript" src="../../style/js/materialize.min.js"></script>
+<script type="text/javascript" src="../../style/js/main.js"></script>
 
 <nav>
     <div class="nav-wrapper indigo darken-2">
@@ -61,16 +61,182 @@
         <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
         <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
     </ul>
-    <h3></h3>
+    <h3>Overview</h3>
     <div class="row">
         <div class="col s12 m12 l6">
             <div class="card indigo lighten-5">
                 <div class="card-content black-text">
+                    <p>Pig Latin is a constructed language game where English words are altered according to a specific
+                        set of rules. It's often used by kids to communicate information in front of one another than
+                        includes and in-group and excludes an outgroup. You need to know the rules in order to be part
+                        of the in group.</p>
 
+                    <p>There are different regional rules for Pig Latin. In this challenge, we'll build a Pig Latin
+                        translator that uses and expands on the rules from the Pig Latin <a
+                                href="https://en.wikipedia.org/wiki/Pig_Latin">wikipedia</a> page.</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <h3>Lesson Objectives</h3>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ul class="browser-default">
+                        <li>Introduction to Regular Expressions</li>
+                        <li>String manipulation</li>
+                        <li>Searching for documentation and examples</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Regular Expressions</h3>
+
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p><em>Regular Expressions</em> are rules you construct to figure out or match patterns inside of
+                        strings. They can be used to manipulate strings that match a certain pattern, or to identify
+                        strings that are malformed.</p>
+
+                    <p>
+                        An example of regular expressions is validating email addresses. Email addresses
+                        follow a predictable set of rules. Regular expressions gives us the tools to be able to scan a
+                        string and determine whether or not it
+                        matches those rules. It might look something like this.
+                    </p>
+                    <code>"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"</code>
+                    <p>
+                        This is a bit dense to look at, but when we break it down there are a few key sections that we
+                        can visually parse.
+                    </p>
+                    <ul class="browser-default">
+                        <li><code class="inline">^</code> says that the pattern should start at the beginning of the
+                            string.
+                        </li>
+                        <li><code class="inline">[a-zA-Z0-9_.+-]+</code> says that there should be an arbitrary number
+                            of alphanumeric characters, plus possibly some special characters like plus signs or
+                            periods.
+                        </li>
+                        <li><code class="inline">@</code> means there should be an @ symbol in there somewhere</li>
+                        <li><code class="inline">\.</code> means there should be a period in there somewhere</li>
+                        <li><code class="inline">$</code> says that we should have reached the end of the string</li>
+                    </ul>
+
+                    <p>
+                        Regular expressions actually have a fascinating
+                        <a href="https://dev.to/alainakafkes/exploring-the-linguistics-behind-regular-expressions-bb4">
+                            linguistic history</a> and are totally worth reading up on. But for this challenge you don't
+                        need to know the underpinning linguistic theory or history. Instead you'll need to search around
+                        for resources for how to manipulate strings in Python using Regex.
+                    </p>
+
+                    <p>This lesson contains less explicit instruction than previous lessons. At this point you should be
+                        getting more comfortable with searching for error messages and reading some documentation. There
+                        are a few resources to get you started below, but they may not be sufficient to complete the
+                        challenge and stretch goals on their own.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Challenge Rules</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ul class="browser-default">
+                        <li>
+                            Single letter words are appended with "ay". <code class="inline">"i" #=> "iay"</code>
+                        </li>
+                        <li>
+                            Words that start with vowels are appended with "ay". <code class="inline">"apple" #=>
+                            "appleay"</code>
+                        </li>
+                        <li>
+                            Words that begin with consonants have the beginning consonant group shifted to the end of
+                            the word. The new "shifted" word is appended with "ay".
+                            <code class="inline">"whiskers" #=> "iskerswhay</code>
+                        </li>
+                        <li>
+                            "qu" is treated as a single consonant <code class="inline">"quit" #=> "itquay"</code>
+                        </li>
+                        <li>
+                            If a string contains multiple words, it should transform each word individually.
+                            <code class="inline">"hello world" #=> "ellohay orldway"</code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>Resources</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ul class="browser-default">
+                        <li>
+                            <a href="http://www.pyregex.com/">PyRegex</a> - an online resource and cheat sheet for
+                            testing
+                            out regex patterns
+                        </li>
+                        <li>
+                            <a href="https://pythex.org/">pythex</a> - a different regex checker with a cleaner UI, but
+                            missing a cheat sheet
+                        </li>
+                        <li>
+                            <a href="https://docs.python.org/3/library/re.html">Official Python 3 Regex
+                                Documentation</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3schools.com/python/python_regex.asp">w3schools.com</a>'s Python Regex
+                            tutorial
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Stretch Goals</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        When you look in the test file for this lesson, you'll notice that there is a class of tests
+                        that have been "skipped." These tests contain extra challenges to make your Pig Latin translator
+                        even better! If you're feeling ambitious, try deleting the line of code that "skips" those
+                        tests, and see if you can get those tests to pass. There's more information about the bonus
+                        challenges in the comments of the test file.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Onward and Upward!</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <p>
+                        You're read for the <a href="../lesson_6_books/index.html">next lesson</a>!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

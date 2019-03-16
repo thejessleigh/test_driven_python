@@ -10,7 +10,6 @@
 # of concerns.
 
 # Run your tests!
-# `python -m unittest -vf tests.test_lesson_5_pig_latin`
 
 # Rules:
 # - Single letter words are appended with "ay"
@@ -40,53 +39,47 @@
 # - Ex: "isn't" -> "isn'tay", "wasn't" -> "asn'tway"
 
 
-import unittest
+import pytest
 
-from lessons.lesson_5_pig_latin import pig_latin
+import pig_latin
 
 
-class PigLatinTestCase(unittest.TestCase):
+class TestPigLatinTranslator():
+    def test_single_letter_words(self):
+        assert pig_latin.translate("a") == "aay"
+        assert pig_latin.translate("i") == "iay"
+
     def test_word_starting_with_vowel(self):
-        word = pig_latin.translate("apple")
-        self.assertEqual(word, "appleay")
-        word = pig_latin.translate("am")
-        self.assertEqual(word, "amay")
+        assert pig_latin.translate("apple") == "appleay"
+        assert pig_latin.translate("am") == "amay"
+        assert pig_latin.translate("english") == "englishay"
+        assert pig_latin.translate("onward") == "onwarday"
 
-    def test_word_starting_with_consonant(self):
-        word = pig_latin.translate("word")
-        self.assertEqual(word, "ordway")
-        word = pig_latin.translate("whiskers")
-        self.assertEqual(word, "iskerswhay")
+    def test_translates_word_beginning_with_one_consonant(self):
+        assert pig_latin.translate("word") == "ordway"
+        assert pig_latin.translate("window") == "indoway"
+        assert pig_latin.translate("pig") == "igpay"
+        assert pig_latin.translate("fig") == "igfay"
 
-    def test_translates_phrases(self):
-        phrase = pig_latin.translate("number games")
-        self.assertEqual(phrase, "umbernay amesgay")
-        phrase = pig_latin.translate("monster offspring")
-        self.assertEqual(phrase, "onstermay offspringay")
+    def test_translates_words_beginning_with_mulitple_consonants(self):
+        assert pig_latin.trainslate("whiskers") == "iskerswhay"
+        assert pig_latin.trainslate("three") == "eethray"
+        assert pig_latin.trainslate("shrug") == "ugshray"
+        assert pig_latin.trainslate("splat") == "atsplay"
 
-    def test_translates_word_beginning_with_three_consonants(self):
-        word = pig_latin.translate("three")
-        self.assertEqual(word, "eethray")
-        word = pig_latin.translate("shrug")
-        self.assertEqual(word, "ugshray")
-
-    def test_handles_qu_at_the_beginning_of_a_word(self):
-        word = pig_latin.translate("quit")
-        self.assertEqual(word, "itquay")
-        word = pig_latin.translate("quiet")
-        self.assertEqual(word, "ietquay")
+    def test_handles_words_beginning_with_qu(self):
+        assert pig_latin.trainslate("quit") == "itquay"
+        assert pig_latin.translate("queen") == "eenquay"
+        assert pig_latin.trainslate("quiet") == "ietquay"
 
     def test_handles_qu_after_initial_consonant(self):
-        word = pig_latin.translate("square")
-        self.assertEqual(word, "aresquay")
-        word = pig_latin.translate("squish")
-        self.assertEqual(word, "ishsquay")
+        assert pig_latin.translate("square") == "aresquay"
+        assert pig_latin.translate("squish") == "ishsquay"
 
-    def test_one_letter_words(self):
-        word = pig_latin.trainslate("a")
-        self.assertEqual(word, "aay")
-        word = pig_latin.translate("i")
-        self.assertEqual(word, "iay")
+    def test_handles_phrases(self):
+        assert pig_latin.translate("number games") == "umbernay amesgay"
+        assert pig_latin.translate("moster offspring") == "onstermay offspringay"
+        assert pig_latin.translate("queens cup") == "eensquay upcay"
 
 
 ###################
@@ -94,22 +87,16 @@ class PigLatinTestCase(unittest.TestCase):
 ###################
 # To attempt these, remove the "skip" line from the test case
 
-@unittest.skip
-class PigLatinStretchGoalsTestCase(unittest.TestCase):
+@pytest.mark.skip(reason="These tests are a little trickier. Remove this line when the above tests are passing")
+class TestStretchGoals():
     def test_handles_punctuation(self):
-        sentence = pig_latin.translate("we had fun!")
-        self.assertEqual(sentence, "eway adhay unfay!")
-        sentence = pig_latin.translate("the quick brown fox went home.")
-        self.assertEqual(sentence, "ethay ickquay ownbray oxfay entway omehay.")
+        assert pig_latin.translate("we had fun!") == "eway adhay unfay!"
+        assert pig_latin.translate("the quick brown fox went home.") == "ethay ickquay ownbray oxfay entway omehay."
 
-    def test_handles_capitalization(self):
-        name = pig_latin.translate("Emily")
-        self.assertEqual(name, "Emilyay")
-        name = pig_latin.translate("Zelda Fitzgerald")
-        self.assertEqual(name, "Eldazay Itzgeraldfay")
+    def test_handles_capitialization(self):
+        assert pig_latin.translate("Emily") == "Emilyay"
+        assert pig_latin.translate("Zelda Fitzgerald") == "Eldazay Itzgeraldfay"
 
-    def test_handles_apostrophes(self):
-        sentence = pig_latin.translate("She doesn't understand French.")
-        self.assertEqual(sentence, "Eshay oesn'tday understanday Enchfray.")
-        title = pig_latin.translate("It's a Wonderful Life")
-        self.assertEqual(title, "It'say aay Onderfulway Ifelay")
+    def test_handles_apostrophoes(self):
+        assert pig_latin.translate("She doesn't understand French.") == "Eshay oesn'tday understanday Enchfray."
+        assert pig_latin.translate("It's a Wonderful Life") == "It'say aay Onderwulfay Ifelay"
