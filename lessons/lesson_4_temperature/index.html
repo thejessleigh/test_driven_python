@@ -5,20 +5,20 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../style/css/materialize.min.css" media="screen,projection"/>
 
     <!--Add favicon-->
-    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../style/assets/favicon.ico" type="image/x-icon"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="../../css/main.css" media="screen" rel="stylesheet">
+    <link href="../../style/css/main.css" media="screen" rel="stylesheet">
 
 </head>
 <body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../../js/materialize.min.js"></script>
-<script type="text/javascript" src="../../js/main.js"></script>
+<script type="text/javascript" src="../../style/js/materialize.min.js"></script>
+<script type="text/javascript" src="../../style/js/main.js"></script>
 
 <nav>
     <div class="nav-wrapper indigo darken-2">
@@ -74,7 +74,7 @@
                         readings from one scale into another. For this particular example, we don't want to have to deal
                         with
                         decimal precision, so each function should return an <em>integer</em> reading after the
-                        conversion.
+                        conversion, and should round down.
                     </p>
 
                 </div>
@@ -115,29 +115,16 @@
                     <p>
                         <em>floats</em> are a data type in Python that represent numbers. They're different from <em>integers</em>
                         because <em>floats</em> can represent a larger subset of numbers. <em>floats</em> have decimal
-                        points.
-                        <em>integers</em> will always represent "whole" numbers.
+                        points. <em>integers</em> will always represent "whole" numbers.
                     </p>
 
-                    <p>
-                        When doing integer math in Python, it will always round <em>down</em>.
-                    </p>
-
-                    <p>
-                        Python2 uses integer math for math operations when you input integers.
-                    </p>
-
-                    <code> 5 / 3 = 1 </code>
-
-                    <p>However, Python3 uses <em>float</em> math when dividing, so instead you'll get</p>
+                    <p>Python3 uses <em>float</em> math when dividing. This might be a bit different than you're used to
+                        if you've worked with Python 2 before.</p>
 
                     <code> 5 / 3 = 1.6666666666666667 </code>
                     <p>
-                        Your code implementation for this challenge will be different based on which version of python
-                        you're
-                        using. If you aren't sure whether you're using Python2 or Python3 type <code class="inline">python
-                        --version</code>
-                        in your terminal with your virtualenv activated. It will print out your current version.
+                        For the purpose of this challenge, though, we want integers, so part of your challenge is to
+                        look up how to turn a float into an integer, and make sure it always rounds down.
                     </p>
 
                 </div>
@@ -168,7 +155,7 @@
                 <div class="card-content black-text">
                     <span class="card-title"><code class="inline">f_to_c</code></span><br>
                     <ul class="browser-default">
-                        <li>Accepts a float</li>
+                        <li>Accepts an integer or float</li>
                         <li>Converts a Fahrenheit reading to Celsius</li>
                         <li>Returns an integer</li>
                     </ul>
@@ -183,7 +170,7 @@
                 <div class="card-content black-text">
                     <span class="card-title"><code class="inline">c_to_f</code></span><br>
                     <ul class="browser-default">
-                        <li>Accepts a float</li>
+                        <li>Accepts an integer or float</li>
                         <li>Converts a Celsius reading to Fahrenheit</li>
                         <li>Returns an integer</li>
                     </ul>
