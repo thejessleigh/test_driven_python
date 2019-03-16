@@ -2,7 +2,7 @@
 # it to alter the output of that function.
 
 # Much like last time, navigate to the lesson_1_greetings directory in your terminal and run your python command
-# `python test_lesson_1.py`
+# `pytest`
 
 # Again, like last time, you should see an import error indicating that you need a file titled
 # `greetings` in your lesson folder.

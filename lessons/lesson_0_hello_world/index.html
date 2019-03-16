@@ -106,7 +106,7 @@
         </div>
     </div>
 
-    <h3>Running Python Unit Tests</h3>
+    <h3>Running PyTest</h3>
 
 
     <div class="row">
@@ -114,17 +114,10 @@
             <div class="card indigo lighten-5">
                 <div class="card-content black-text">
                     <p>
-                        First, make sure you're running the right version of Python.
-                        If you've set your environment up correctly and you're using Python 3 by default, the "python"
-                        command should run correctly.
-                        However, if you're using both Python 2 and Python 3 on your machine, check which version of
-                        Python you're using with "python --version".
-                        If the output doesn't read "Python 3.x.x" then use the command "python3"
-                        rather than "python" in all the examples below.
+                        First, make sure you're running your virtual environment with the dependencies installed.
                     </p>
                     <p>
-                        To run your first python file, open your terminal and type in <code>python
-                        test_lesson_0.py</code>.
+                        Then run the command <code class="inline">pytest</code> in your terminal.
                 </div>
             </div>
         </div>
@@ -143,9 +136,9 @@
                     </p>
 
                     <p>
-                        You should have seen an <code class="inline">ImportError</code>. This is Python telling you that
-                        it's unable to import the module <code class="inline">hello_world</code> because there is no
-                        <code class="inline">hello_world.py</code>file in the lesson 0 directory.
+                        You should have seen a test failure with an <code class="inline">ImportError</code>. This is
+                        Python telling you that it's unable to import the module <code class="inline">hello_world</code>
+                        because there is no<code class="inline">hello_world.py</code>file in the lesson 0 directory.
                     </p>
                     So your first step should be to create <code class="inline">hello_world.py</code> in <code
                         class="inline">lessons/lesson_0_hello_world</code>.
@@ -171,7 +164,7 @@
                     <p>
                         Functions in Python are defined by the <code class="inline">def</code> keyword, followed by your
                         <em>function</em> name. After
-                        your function name there are two parenthases followed by a colon, <code class="inline">
+                        your function name there are two parentheses followed by a colon, <code class="inline">
                         (): </code>. If you're
                         defining a
                         function that accepts <em>arguments</em> this is where they'll go. Don't worry about arguments
@@ -240,13 +233,16 @@
                     </p>
 
                     <p>
-                        <em>Note: if you've used other programming lanugages before, you might have come across the idea of
-                        implicit
-                        returns, meaning that the last variable in the top level scope of the function will always be
-                        returned. This is
-                        <strong>not</strong> the case in Python. If you want your function to return something, you must
-                        always
-                        explicitly state it, otherwise your function will return <strong><code
+                        <em>Note: if you've used other programming lanugages before, you might have come across the idea
+                            of
+                            implicit
+                            returns, meaning that the last variable in the top level scope of the function will always
+                            be
+                            returned. This is
+                            <strong>not</strong> the case in Python. If you want your function to return something, you
+                            must
+                            always
+                            explicitly state it, otherwise your function will return <strong><code
                                     class="inline">None</code></strong>.</em>
                     </p>
                 </div>
@@ -268,7 +264,8 @@
                         string "Hello World!" Once you've edited your file, keep running your tests and amending
                         your code until all
                         of
-                        your tests pass. You'll know you're done when you run the test file and there is no output.
+                        your tests pass. You'll know you're done when you run the test file and the PyTest output
+                        tells you that all your tests passed.
                     </p>
                     <p>
                         That means that you've passed all the tests and completed the challenge!<br> You're ready to

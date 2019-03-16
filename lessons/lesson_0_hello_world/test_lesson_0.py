@@ -1,7 +1,6 @@
 # This lesson teaches you how to define a Python method. Try running the tests for this file before doing anything!
 
-# To run the file, navigate to the lesson 0 directory in your terminal and type `python test_lesson_0.py`.
-# That command looks like a lot at first. Let's break it down.
+# To run the file, navigate to the lesson 0 directory in your terminal and type `pytest`.
 
 # What error did you get when you first ran it?
 # Remember, errors are built to be **helpful**, not scary!
@@ -14,7 +13,7 @@
 
 import pytest
 
-from hello_world import hello_world
+import hello_world
 
 
 def test_hello_function_exists():

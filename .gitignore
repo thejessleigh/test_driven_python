@@ -3,3 +3,4 @@
 .idea
 venv/
 lesson_*.py
+*.pytest_cache/
