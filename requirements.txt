@@ -1,1 +1,2 @@
-ipython
+ipython==7.3.0
+pytest==4.3.1
