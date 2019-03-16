@@ -5,20 +5,20 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../style/css/materialize.min.css" media="screen,projection"/>
 
     <!--Add favicon-->
-    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../style/assets/favicon.ico" type="image/x-icon"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="../../css/main.css" media="screen" rel="stylesheet">
+    <link href="../../style/css/main.css" media="screen" rel="stylesheet">
 
 </head>
 <body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../../js/materialize.min.js"></script>
-<script type="text/javascript" src="../../js/main.js"></script>
+<script type="text/javascript" src="../../style/js/materialize.min.js"></script>
+<script type="text/javascript" src="../../style/js/main.js"></script>
 
 <nav>
     <div class="nav-wrapper indigo darken-2">
@@ -109,22 +109,20 @@
                 <div class="card-content black-text">
                     <p>
                         In <a href="../lesson_0_hello_world/index.html">Lesson 0</a> we learned how to define a basic
-                        function in
-                        Python. This time, we'll create a function that's slightly more complicated.
+                        function in Python. This time, we'll create a function that's slightly more complicated.
                     </p>
 
                     <p>
-                        Instead of using empty parenthases when defining the name of the funtion, we can fill those
-                        parenthases with
-                        <em>argument names</em>. These are variables that we pass into the function that we can use
-                        later.
+                        Instead of using empty parentheses when defining the name of the function, we can fill those
+                        parentheses with <em>argument names</em>. These are variables that we pass into the function
+                        that we can use later.
                     </p>
                     <code>
                         def repeat_my_argument(argument):
                     </code>
                     <br>
                     <code>
-                        &nbsp;&nbsp;&nbsp;&nbsp;print argument + "!"
+                        &nbsp;&nbsp;&nbsp;&nbsp;print(argument + "!")
                     </code>
 
                     <p>
@@ -186,7 +184,7 @@
                             directory
                         </li>
                         <li>
-                            Create a function called <code class="inline">greetings</code> in the <code class="inline">greetings.py</code>
+                            Create a function called <code class="inline">greet</code> in the <code class="inline">greetings.py</code>
                             file
                         </li>
                         <li>
@@ -212,27 +210,24 @@
             <div class="card indigo lighten-5">
                 <div class="card-content black-text">
                     <p>
-                        Let's run our unit test command in the terminal again, but with the correct module name for our
-                        lesson 1 tests.
+                        Let's run our tests.
 
                     </p>
 
-                        <code>python -m unittest -vf tests.test_lesson_1_greetings</code>
+                    <code>python test_lesson_1.py</code>
 
 
                     <p>
-                        Again, you should have seen an <code class="inline">ImportError</code> that indicates we need a certain file
-                        that doesn't exist
-                        yet. So let's create <code class="inline">greetings.py</code> in <code class="inline">lessons/lesson_1_greetings</code>.
+                        Again, you should have seen an <code class="inline">ImportError</code> that indicates we need a
+                        certain file that doesn't exist yet. So let's create <code class="inline">greetings.py</code> in
+                        <code class="inline">lessons/lesson_1_greetings</code>.
                     </p>
 
                     <p>
                         Run your tests again and fix each failure as it comes up. You'll know you're done when your
-                        output says:
-                        </p>
-                        <code>Ran 3 tests in 0.000s OK</code>
+                        code runs without outputting anything.
                     <p>
-                    Congratulations, you're ready for <a href="../lesson_2_fizzbuzz/index.html">Lesson 2</a>!
+                        Congratulations, you're ready for <a href="../lesson_2_fizzbuzz/index.html">Lesson 2</a>!
                     </p>
                 </div>
             </div>
