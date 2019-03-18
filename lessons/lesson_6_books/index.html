@@ -5,20 +5,20 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../style/css/materialize.min.css" media="screen,projection"/>
 
     <!--Add favicon-->
-    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../style/assets/favicon.ico" type="image/x-icon"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="../../css/main.css" media="screen" rel="stylesheet">
+    <link href="../../style/css/main.css" media="screen" rel="stylesheet">
 
 </head>
 <body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../../js/materialize.min.js"></script>
-<script type="text/javascript" src="../../js/main.js"></script>
+<script type="text/javascript" src="../../style/js/materialize.min.js"></script>
+<script type="text/javascript" src="../../style/js/main.js"></script>
 
 <nav>
     <div class="nav-wrapper indigo darken-2">
@@ -61,12 +61,76 @@
         <li><a href="../lesson_6_books/index.html">Lesson 6: Books</a></li>
         <li><a href="../lesson_7_anagrams/index.html">Lesson 7: Anagrams</a></li>
     </ul>
-    <h3></h3>
+    <h3>Overview</h3>
     <div class="row">
         <div class="col s12 m12 l6">
             <div class="card indigo lighten-5">
                 <div class="card-content black-text">
+                    <p>
+                        Capitalizing the title of books and articles can be a bit tricky in English. There are a couple
+                        finnicky rules that mean you can't just capitalize every word and call it a day.
+                    </p>
 
+                    <p>
+                        This lesson we're going to create a <code class="inline">Class</code> called <code
+                            class="inline">Book</code>. This class should take in a single <em>parameter</em> when
+                        <em>initialize</em>. This will be a <code class="inline">string</code> with the book's title.
+                    </p>
+
+                    <p>
+                        You should then set the book's <code class="inline">title</code> attribute equal to the
+                        correctly "titleized" version of the input string.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Lesson Objectives</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ol class="browser-default">
+                        <li>Read official Python documentation</li>
+                        <li>Learn how to create a <code class="inline">Class</code></li>
+                        <li>String manipulation</li>
+                        <li>Setting variables on an <em>instance</em> of a <code class="inline">Class</code>.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Challenge Rules</h3>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card indigo lighten-5">
+                <div class="card-content black-text">
+                    <ul class="browser-default">
+                        <li>
+                            Create a class called <code class="inline">Book</code> that takes in a single string when
+                            initialized
+                        </li>
+                        <li>
+                            Create a function inside your Book class that correctly "titleizes" the string according to
+                            the following rules:
+                            <ol class="browser-default">
+                                <li>Capitalize the first and last word</li>
+                                <li>Capitalize nouns, pronouns, adjectives, verbs, adverbs, and subordinate conjunctions
+                                    (although, because)
+                                </li>
+                                <li>Lowercase articles (a, an, the), coordinating conjunctions (and, but or), and
+                                    prepositions
+                                </li>
+                                <li>Lowercase the 'to' in an infinitive (Let's Learn to Play Chess)</li>
+                            </ol>
+                        </li>
+                        <li>
+                            Assign the "titleized" string to an instance variable in <code class="inline">Book</code>
+                            called <code class="inline">title</code>.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
